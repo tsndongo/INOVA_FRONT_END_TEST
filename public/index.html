@@ -6,20 +6,23 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>EU Countries - INOVA Test</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+        <link rel="styleshee" href="main.css">
     </head>
 
     <body>
         <div class="container">
 
-            <div style="padding: 10px" >
-                <input type="text" style="width: 70%" id="searchText" placeholder="Search..">
-                <button id="search">SEARCH</button>              
+            <form class="input-group mb-3" id="searchForm">
+                <input type="text" required class="form-control" id="searchText" placeholder="Search.." aria-describedby="basic-addon2">
+                <div class="input-group-btn">
+                    <button id="search" class="btn btn-outline-secondary" type="submit"><span class="glyphicon glyphicon-search"></span></button> 
+                </div>             
             </div>
 
             <!-- <div style="padding: 20px"></div>
             <button id="getAPI">GET DATA FROM API </button> -->
+
+            <!-- <div id="error"></div> -->
             
             <div style="padding: 10px; width: 50%; float:left">
                 <div class="list-group" id="result" role="group">

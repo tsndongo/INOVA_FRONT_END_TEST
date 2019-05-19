@@ -1,6 +1,11 @@
-
-document.getElementById('search').addEventListener('click', function(){displayCountryResults(document.getElementById('searchText').value)});
-
+var form = document.querySelector('#searchForm');
+ 
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var searchText = document.getElementById('searchText').value;
+  displayCountryResults(searchText);
+}, false);
+ 
 function getCountryListByName(value){
     var query = 'https://restcountries.eu/rest/v2/name/' + value;
     return fetch(query)
@@ -21,14 +26,13 @@ function displayCountryResults(value){
         let result = ``;
         data.forEach((country) => {            
             const { alpha3Code, name, flag, nativeName, capital, population, languages, timezones, currencies, borders} = country
-            //console.log("languages: ", languages);
             result +=
                 `<button type="button" id="${alpha3Code}" class="list-group-item list-group-item-action">
                     ${alpha3Code}
                     <h4 class="point-none">${name} </h4>
                  </button>`;
                     document.getElementById('result').innerHTML = result;
-                    // document.getElementById('resultDetails').innerHTML = resultDetails;
+                    
         });   
         var header = document.getElementById("result");
         var btns = header.getElementsByClassName("list-group-item");
@@ -37,12 +41,12 @@ function displayCountryResults(value){
                 var current = document.getElementsByClassName("active");
                 if (current.length > 0) { 
                     current[0].className = current[0].className.replace(" active", "");                              
-                }                
-                //displayCountryDetails(current[0].id);  
+                }                  
                 this.className += " active";
             });
         }        
     });
+    return null;
 }
 
 function displayCountryDetails(value){
