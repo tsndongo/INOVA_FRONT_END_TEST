@@ -1,3 +1,7 @@
+.container{
+    padding: 10px, 0px;
+}
+
 .navbar{
     background-color: #0072C7;
     color: white;
@@ -44,4 +48,8 @@
     .small{
         display: none;
     }
+}
+
+.hidden{
+    display: none;
 }

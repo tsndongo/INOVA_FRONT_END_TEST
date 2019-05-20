@@ -1,3 +1,6 @@
+<!-- Created May 19th by Takou Syntiche N'DONGO on
+     Class containing all of the JavaScript code for the application -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,7 +15,8 @@
 
     <body>
         <div class="container">
-            <div class="navbar ">
+            <!-- Navigation bar with title and search bar -->
+            <div class="navbar">
                 <h2>Country search</h2>
                 <h5>Enter a country in the search bar to access its information</h5>
                 <form class="input-group mb-3" id="searchForm">
@@ -21,40 +25,20 @@
                         <button id="search" class="btn" type="submit">Search</button> 
                     </div>             
                 </form>
-            </div>
-             
-            <!-- <h3 class="small">I'm small</h3> -->
-
-            <!-- <div class="row big" id="result-container">
-                <div class="col-lg-6 col-md-6" id="header">
-                    <div class="list-group" id="result" role="group"></div>
-                </div>
-                <div class="col-offset-6 col-md-6 col-lg-6 sticky-top" id="details">
-                    <div id="resultDetails"></div>
-                </div> 
+                <div id="errorMsg" class="alert alert-danger text-center hidden" role="alert" style="width: 100%;"></div>
             </div>
 
-            <div class="row small" id="result-container">
-                <div class="col-lg-6 col-md-6" id="header">
-                    <div class="list-group" id="result" role="group">
-                        <div id="resultDetails"></div>
-                    </div>                    
-                </div> 
-            </div> -->
-
+            <!-- Where the search results are displayed -->
             <div class="row" id="result-container">
                 <div class="col-lg-6 col-md-6" >
-                    <div class="list-group" id="result" role="group">
-                        
-                    </div>
+                    <div class="list-group" id="result" role="group"></div>
                 </div>
                 <div class="col-offset-6 col-md-6 col-lg-6 big" id="details">
                     <div id="resultDetails"></div>
                 </div> 
             </div>
-
             
-            <script src="js/app.js"></script>
+            <script src="app.js"></script>
             
             <!--Bootstrap-->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
