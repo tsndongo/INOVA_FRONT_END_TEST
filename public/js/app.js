@@ -61,9 +61,10 @@ function displayCountryResults(value){
                 var currentDetail = document.getElementsByClassName("selected");
                 currentDetail[0].className = currentDetail[0].className.replace(" selected", "");  
                 for(var j = 0; j < details.length; j++){
-                    if(details[j].parentElement.classList.contains("active"))
-                    details[j].className += " selected";
-                    break;
+                    if(details[j].parentElement.classList.contains("active")){
+                        details[j].className += " selected";
+                        break;
+                    }
                 }
                 displayCountryDetails(this.id);
             });
