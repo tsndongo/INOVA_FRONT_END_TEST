@@ -60,13 +60,8 @@ function getCountryByCode(code){
                 throw new Error('Something went wrong ' + res.status);
             }
         })
-        .catch(err => {
-        if(err.status == '404'){
-            noMatchFoundError = "<div class='alert alert-danger'>No matches were found.<div>";
-            document.getElementById("navbar").append()
-        }
-        console.error(err);
-    });
+        .catch(err => {console.error(err);
+    });        
 }
 
 /**********************************************************************************************************
