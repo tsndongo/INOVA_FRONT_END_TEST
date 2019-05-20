@@ -23,10 +23,11 @@ form.addEventListener('submit', function (e) {
  //Fetches a list of country that matches (fully or partially) the country name to the user input
 function getCountryListByName(value){
     //Queries all countries if no value is put in search bar
+    var query = '';
     if(value){
-        var query = 'https://restcountries.eu/rest/v2/name/' + value;
+        query = 'https://restcountries.eu/rest/v2/name/' + value;
     } else {
-        var query = 'https://restcountries.eu/rest/v2/all';
+        query = 'https://restcountries.eu/rest/v2/all';
     }    
 
     //Fetches data
@@ -34,7 +35,7 @@ function getCountryListByName(value){
         .then((res) => { 
             if(res.ok){
                 return res.json();
-            } else if (res.status == '404'){
+            } else if (res.status === '404'){
                 setErrorMessage('No matches were found.');
             } else {
                 console.log(res);
@@ -52,7 +53,7 @@ function getCountryByCode(code){
         .then((res) => { 
             if(res.ok){
                 return res.json();
-            } else if (res.status == '404'){
+            } else if (res.status === '404'){
                 setErrorMessage('No matches were found.');
             } else {
                 console.log(res);
