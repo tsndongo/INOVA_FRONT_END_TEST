@@ -1,0 +1,47 @@
+.navbar{
+    background-color: #0072C7;
+    color: white;
+    padding: 1em;
+}
+
+.container{
+    padding-top: 1em;
+}
+
+.active{
+    background-color:#0072C7;
+}
+
+.flag{
+    width: 30%;
+    border: 1px solid black;
+}
+
+#result-container{
+    margin-top: 1em;
+}
+
+.card-body{
+    color: black;
+}
+
+@media(min-width: 770px){
+    .small{
+        display:none;
+    }
+    .big{
+        display:block;
+    }
+}
+
+@media(max-width: 770px){
+    .big{
+        display:none;
+    }
+    .small.selected{
+        display: block;
+    }
+    .small{
+        display: none;
+    }
+}

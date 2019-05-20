@@ -4,36 +4,57 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>EU Countries - INOVA Test</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="styleshee" href="main.css">
+        <title>Country Search - INOVA Test</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </head>
 
     <body>
         <div class="container">
-
-            <form class="input-group mb-3" id="searchForm">
-                <input type="text" required class="form-control" id="searchText" placeholder="Search.." aria-describedby="basic-addon2">
-                <div class="input-group-btn">
-                    <button id="search" class="btn btn-outline-secondary" type="submit"><span class="glyphicon glyphicon-search"></span></button> 
-                </div>             
+            <div class="navbar ">
+                <h2>Country search</h2>
+                <h5>Enter a country in the search bar to access its information</h5>
+                <form class="input-group mb-3" id="searchForm">
+                    <input type="text" class="form-control" id="searchText" placeholder="Enter a country..." aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button id="search" class="btn" type="submit">Search</button> 
+                    </div>             
+                </form>
             </div>
+             
+            <!-- <h3 class="small">I'm small</h3> -->
 
-            <!-- <div style="padding: 20px"></div>
-            <button id="getAPI">GET DATA FROM API </button> -->
-
-            <!-- <div id="error"></div> -->
-            
-            <div style="padding: 10px; width: 50%; float:left">
-                <div class="list-group" id="result" role="group">
+            <!-- <div class="row big" id="result-container">
+                <div class="col-lg-6 col-md-6" id="header">
+                    <div class="list-group" id="result" role="group"></div>
                 </div>
+                <div class="col-offset-6 col-md-6 col-lg-6 sticky-top" id="details">
+                    <div id="resultDetails"></div>
+                </div> 
             </div>
-            <div style="width: 50%; float:left" id="resultDetails"></div>
-            <div style="padding: 20px"></div>
-        <!--<script src="app.js">-->
-    
 
-            <script src="ts/app.ts"></script>
+            <div class="row small" id="result-container">
+                <div class="col-lg-6 col-md-6" id="header">
+                    <div class="list-group" id="result" role="group">
+                        <div id="resultDetails"></div>
+                    </div>                    
+                </div> 
+            </div> -->
+
+            <div class="row" id="result-container">
+                <div class="col-lg-6 col-md-6" >
+                    <div class="list-group" id="result" role="group">
+                        
+                    </div>
+                </div>
+                <div class="col-offset-6 col-md-6 col-lg-6 big" id="details">
+                    <div id="resultDetails"></div>
+                </div> 
+            </div>
+
+            
+            <script src="js/app.js"></script>
             
             <!--Bootstrap-->
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
