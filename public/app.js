@@ -35,7 +35,7 @@ function getCountryListByName(value){
         .then((res) => { 
             if(res.ok){
                 return res.json();
-            } else if (res.status === '404'){
+            } else if (res.status == '404'){
                 setErrorMessage('No matches were found.');
             } else {
                 console.log(res);
@@ -53,7 +53,7 @@ function getCountryByCode(code){
         .then((res) => { 
             if(res.ok){
                 return res.json();
-            } else if (res.status === '404'){
+            } else if (res.status == '404'){
                 setErrorMessage('No matches were found.');
             } else {
                 console.log(res);
