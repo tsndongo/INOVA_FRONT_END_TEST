@@ -1,0 +1,20 @@
+{
+  "name": "INOVA_FRONT_END_TEST",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsndongo/INOVA_FRONT_END_TEST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsndongo/INOVA_FRONT_END_TEST/issues"
+  },
+  "homepage": "https://github.com/tsndongo/INOVA_FRONT_END_TEST#readme"
+}
