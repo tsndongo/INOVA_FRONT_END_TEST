@@ -4,7 +4,7 @@
  */
 
 //Identifies the form for submittion
-var form = document.querySelector('#searchForm');
+var form = document.getElementById('searchForm');
  
 //Submit listener for search bar
 form.addEventListener('submit', function (e) {
